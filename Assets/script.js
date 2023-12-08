@@ -5,11 +5,9 @@ var pageFourEl = document.querySelector('#forthPage')
 var startPageEl = document.querySelector('#startPage')
 var goToPageTwoEl = document.querySelector('.goToPageTwo')
 
+// 
 document.querySelector("#startQuiz")
     .addEventListener("click", startQuiz)
-
-
-
 
 
 function startQuiz() {
@@ -24,14 +22,47 @@ function startQuiz() {
     // choices.addEventListener("click", nextPage)
 
 }
+// 
+
+// 
+document.querySelector("#secondPage")
+    .addEventListener("click", secToThird)
 
 
 function nextPage() {
     pageOneEl.classList.toggle("hide");
     pageTwoEl.classList.toggle("hide");
+    for (var i = 0; i < 4; i++) {
+        console.log(choices[i])
+        choices[i].addEventListener("click", secToThird)
+    }
 }
 
 
+
+function secToThird() {
+    pageTwoEl.classList.toggle("hide");
+    pageThreeEl.classList.toggle("hide");
+    var choices = document.querySelectorAll(".goToPageThree")
+}
+
+// all of it 
+
+
+// trying to make the third page hide
+
+document.querySelector("#secondPage")
+    .addEventListener("click", secToThird)
+
+
+function nextPage() {
+    pageOneEl.classList.toggle("hide");
+    pageTwoEl.classList.toggle("hide");
+    for (var i = 0; i < 4; i++) {
+        console.log(choices[i])
+        choices[i].addEventListener("click", secToThird)
+    }
+}
 
 
 var strings = pageTwoEl.children[1].children[0]
